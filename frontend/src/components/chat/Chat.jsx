@@ -1,6 +1,6 @@
 import './Chat.css'
 
-export function Chat(){
+export function Chat() {
     return (
         <>
             <div className="chats">
@@ -16,12 +16,12 @@ export function Chat(){
                         <div className="msg-data ovd-msg-data">
                             <p>
                                 Hey There,<br />
-                                I am your Online Virtual Doctor...<br />
+                                I am your Online Virtual Doctor,<br />
                                 How can I help you...
                             </p>
                         </div>
                     </div>
-                    <div className="msg user-msg">
+                    {/* <div className="msg user-msg">
                         <span className="profile">
                             <img src="./user-profile.png" alt="user-profile" />
                         </span>
@@ -30,26 +30,27 @@ export function Chat(){
                                 Recently a honeybee sting me, please help me out to get relief.
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='inp-by-user'>
-                    <input id='user-query' type="text" placeholder='ask something...'/>
-                    <button className='submit-query' onclick={()=>{
+                    <input id='user-query' type="text" placeholder='ask something...' />
+                    <button className='submit-query' onClick={() => {
                         let messages = document.getElementById('messages');
                         let data = document.querySelector('#user-query');
-                        if(data.value!=''){
-                            let newdata = `
-                                <div className="msg user-msg">
-                                    <span className="profile">
-                                        <img src="./user-profile.png" alt="user-profile" />
-                                    </span>
-                                    <div className="msg-data user-msg-data">
-                                        <p>${data.value}</p>
-                                    </div>
-                                </div>`;
-                            messages.appendChild(newdata);
+                        if (data.value != '') {
+                            let user_msg = document.createElement('div');
+                            user_msg.setAttribute('class', 'msg user-msg');
+                            user_msg.innerHTML =  
+                                `<span class="profile">
+                                    <img src="./user-profile.png" alt="user-profile" />
+                                </span>
+                                <div class="msg-data user-msg-data">
+                                    <p>${data.value}</p>
+                                </div>
+                            `;
+                            messages.appendChild(user_msg);
                         }
-                    }}>send</button>
+                    }}><img src='./send.png' alt='send icon' /></button>
                 </div>
             </div>
         </>

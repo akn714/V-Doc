@@ -4,7 +4,7 @@
 }
 
 .chats-title{
-    /* height: 40px; */
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +76,11 @@ span, img {
     width: 18%;
     border: 1px solid gray;
     margin-left: 10px;
+}
+
+img#sendbtn {
+    border-radius: 0px;
+    height: 23px;
 }
 
 @media (max-width: 600px){
