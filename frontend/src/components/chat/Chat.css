@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.chats-title{
+    /* height: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+    font-size: 2vh;
+}
+
+#messages{
+    margin: 10px;
+    border-top: 1px solid gray;
+    font-size: 13px;
+}
+
+.msg {
+    display: flex;
+    border-bottom: 1px solid gray;
+    min-height: 80px;
+    /* align-items: center; */
+    font-family: sans-serif;
+    margin: 10px 0px;
+}
+
+span.profile {
+    border: 1px solid gray;
+    margin: 0px 20px;
+}
+
+span, img {
+    height: 40px;
+    z-index: -1;
+    border-radius: 25%;
+}
+
+.msg-data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 2px;
+    background: #80808012;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    line-height: 20px;
+}
+
+.inp-by-user {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    border-top: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inp-by-user input{
+    height: 30px;
+    width: 70%;
+    padding-left: 16px;
+    font-size: 15px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.inp-by-user button{
+    height: 30px;
+    width: 18%;
+    border: 1px solid gray;
+    margin-left: 10px;
+}
+
+@media (max-width: 600px){
+    span.profile{
+        margin: 0px 10px;
+    }
+    .msg-data {
+        padding-left: 8px;
+    }
+}
