@@ -1,4 +1,5 @@
 import './Chat.css'
+// import './Chats'
 
 export function Chat() {
     return (
@@ -33,24 +34,27 @@ export function Chat() {
                     </div> */}
                 </div>
                 <div className='inp-by-user'>
-                    <input id='user-query' type="text" placeholder='ask something...' />
-                    <button className='submit-query' onClick={() => {
-                        let messages = document.getElementById('messages');
-                        let data = document.querySelector('#user-query');
-                        if (data.value != '') {
-                            let user_msg = document.createElement('div');
-                            user_msg.setAttribute('class', 'msg user-msg');
-                            user_msg.innerHTML =  
-                                `<span class="profile">
-                                    <img src="./user-profile.png" alt="user-profile" />
-                                </span>
-                                <div class="msg-data user-msg-data">
-                                    <p>${data.value}</p>
-                                </div>
-                            `;
-                            messages.appendChild(user_msg);
-                        }
-                    }}><img src='./send.png' alt='send icon' /></button>
+                    <form action='#'>
+                        <input id='user-query' type="text" placeholder='ask something...' />
+                        <button className='submit-query' onClick={() => {
+                            let messages = document.getElementById('messages');
+                            let data = document.querySelector('#user-query');
+                            if (data.value !== '') {
+                                let user_msg = document.createElement('div');
+                                user_msg.setAttribute('class', 'msg user-msg');
+                                user_msg.innerHTML =
+                                    `<span class="profile">
+                                        <img src="./user-profile.png" alt="user-profile" />
+                                    </span>
+                                    <div class="msg-data user-msg-data">
+                                        <p>${data.value}</p>
+                                    </div>
+                                `;
+                                messages.appendChild(user_msg);
+                                document.querySelector('#user-query').value = '';
+                            }
+                        }}><img src='./send.png' alt='send icon' /></button>
+                    </form>
                 </div>
             </div>
         </>

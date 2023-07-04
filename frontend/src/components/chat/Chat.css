@@ -16,6 +16,7 @@
     margin: 10px;
     border-top: 1px solid gray;
     font-size: 13px;
+    padding-bottom: 30px;
 }
 
 .msg {
@@ -34,7 +35,7 @@ span.profile {
 
 span, img {
     height: 40px;
-    z-index: -1;
+    /* z-index: -1; */
     border-radius: 25%;
 }
 
@@ -51,7 +52,7 @@ span, img {
     line-height: 20px;
 }
 
-.inp-by-user {
+form {
     position: fixed;
     bottom: 0;
     height: 50px;
@@ -60,6 +61,7 @@ span, img {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: white;
 }
 
 .inp-by-user input{
@@ -72,16 +74,25 @@ span, img {
 }
 
 .inp-by-user button{
-    height: 30px;
+    height: 32px;
     width: 18%;
     border: 1px solid gray;
     margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-img#sendbtn {
+.inp-by-user button img{
+    height: 24px;
+    border-radius: 0px;
+}
+
+/* img#sendbtn {
     border-radius: 0px;
     height: 23px;
-}
+    z-index: 0;
+} */
 
 @media (max-width: 600px){
     span.profile{
