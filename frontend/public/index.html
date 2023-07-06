@@ -10,6 +10,28 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <button onclick="sendquery()">send query</button>
     <script type="module" src="/src/index.jsx"></script>
   </body>
+  <script>
+    function sendquery(){
+      let headers = new Headers();
+
+      headers.append('Content-Type', 'text/plain');
+      headers.append('Accept', 'text/plain');
+
+      headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+      headers.append('Access-Control-Allow-Credentials', 'true');
+
+      headers.append('GET', 'POST', 'OPTIONS');
+
+      fetch('http://localhost:3001/sendquery', {
+          method: 'POST',
+          headers: headers,
+          body: new FormData(document.querySelector('form'))
+      })
+      .then(res => res.text())
+      .then(data => console.log(data));
+    }
+  </script>
 </html>
