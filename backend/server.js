@@ -5,11 +5,11 @@ const bodyParser = require('body-parser');
 let app = express();
 
 let corsOptions = {
-    origin: 'http://localhost:3000'
+    origin: 'http://localhost:3001'
 }
 
 app.use(cors(corsOptions));
-app.use(express.static('/static', __dirname + '/views/'));
+app.use(express.static(__dirname + '/views/'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

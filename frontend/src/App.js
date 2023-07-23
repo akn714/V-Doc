@@ -9,6 +9,7 @@ import {
     RouterProvider,
     Route
 } from "react-router-dom";
+
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/">
@@ -17,12 +18,10 @@ const router = createBrowserRouter(
     )
 );
 
-function App() {
+export function App() {
     return (
         <>
             <RouterProvider router={router} />
         </>
     );
 }
-
-export default App;
