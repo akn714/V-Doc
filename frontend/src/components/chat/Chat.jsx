@@ -42,7 +42,11 @@ export function Chat() {
                         </span>
                         <div id='ovd-msg-data' class="msg-data ovd-msg-data">
                             <!-- loader -->
-                            <div class='loader'>loader</div>
+                            <div id="loader">
+                                <div class="loader-dot loader-dot1"></div>
+                                <div class="loader-dot loader-dot2"></div>
+                                <div class="loader-dot loader-dot3"></div>
+                            </div>
                         </div>
                     `
                     document.querySelector('#messages').appendChild(item)
@@ -106,7 +110,7 @@ export function Chat() {
 
                     document.getElementById("ovd-msg-data").removeAttribute('id');
                     document.querySelector('#user-query').value = '';
-                    document.querySelector('.loader').remove();
+                    document.querySelector('#loader').remove();
                 })
                 window.scroll(0, document.getElementsByClassName('chats')[0].scrollHeight)
             // }
@@ -145,6 +149,11 @@ export function Chat() {
                         </div>
                     </div> */}
                 </div>
+                {/* <div id="loader">
+                    <div className="loader-dot loader-dot1"></div>
+                    <div className="loader-dot loader-dot2"></div>
+                    <div className="loader-dot loader-dot3"></div>
+                </div> */}
                 <div className='inp-by-user'>
                     <form id='user-query-inp-form'>
                         <input name='query' id='user-query' type="text" placeholder='ask something...' />

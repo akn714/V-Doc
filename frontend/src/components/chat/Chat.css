@@ -12,6 +12,90 @@
     font-size: 2vh;
 }
 
+
+div#loader {
+    height: 26px;
+    width: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12%;
+    /* border: 1px solid gray; */
+}
+.loader-dot {
+    height: 36%;
+    width: 18%;
+    background: #afafaf;
+    border-radius: 16px;
+    transform: scale(1);
+    transition: .2s;
+}
+.loader-dot1{
+    animation: rotation1 1s linear infinite !important;
+}
+@keyframes rotation1 {
+    0% {
+        transform: scale(1.05);
+        background: gray;
+    }
+    25% {
+        transform: scale(1.5);
+        background: gray;
+    }
+    50% {
+        transform: scale(1.05);
+        background: #afafaf;
+    }
+    100% {
+        transform: scale(1);
+        background: #afafaf;
+    }
+} 
+.loader-dot2{
+    animation: rotation2 1s linear infinite !important;
+}
+@keyframes rotation2 {
+    0% {
+        transform: scale(1);
+        background: #afafaf;
+    }
+    25% {
+        transform: scale(1.05);
+        background: gray;
+    }
+    50% {
+        transform: scale(1.5);
+        background: gray;
+    }
+    100% {
+        transform: scale(1.05);
+        background: #afafaf;
+    }
+} 
+.loader-dot3{
+    animation: rotation3 1s linear infinite !important;
+}
+@keyframes rotation3 {
+    0% {
+        transform: scale(1.05);
+        background: gray;
+    }
+    25% {
+        transform: scale(1);
+        background: #afafaf;
+    }
+    50% {
+        transform: scale(1.05);
+        background: gray;
+    }
+    100% {
+        transform: scale(1.5);
+        background: gray;
+    }
+} 
+  
+
+
 #messages{
     margin: 10px;
     border-top: 1px solid gray;
