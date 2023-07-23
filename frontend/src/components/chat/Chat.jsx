@@ -114,6 +114,7 @@ export function Chat() {
                 })
                 window.scroll(0, document.getElementsByClassName('chats')[0].scrollHeight)
             // }
+                document.querySelector('#user-query').value = '';
         })
     })
 
