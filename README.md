@@ -1,2 +1,2 @@
-# On-V-Doctor ( Online Virtual Doctor )
-Project for unstop mercor hackathon
+# V-Doc ( Virtual Doctor )
+
