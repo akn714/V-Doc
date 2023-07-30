@@ -1,6 +1,4 @@
 import './Chat.css'
-// import './Chats'
-import '../index.js'
 import { useEffect } from 'react';
 
 export function Chat() {
@@ -64,31 +62,9 @@ export function Chat() {
             
             e.preventDefault();
 
-            // if(query.value==''){
-            //     alert('input is empty')
-            // }
-            // else{
-                
-                // setTimeout(() => {
-                    // let item = document.createElement('div');
-                    // item.setAttribute('class','msg ovd-msg');
-
-                    // item.innerHTML = `
-                    //     <span className="profile">
-                    //         <img src="./doctor-profile.png" alt="on-v-doctor-profile" />
-                    //     </span>
-                    //     <div id='ovd-msg-data' className="msg-data ovd-msg-data">
-                    //         <!-- loader -->
-                    //         <div class='loader'>loader</div>
-                    //     </div>
-                    // `
-                    // document.querySelector('#messages').appendChild(item)
-                // }, 100);
-
                 let data = {
                     "query": query.value
                 }
-                // console.log(new FormData(document.querySelector('#user-query-inp-form')))
                 let req_json = {
                     method: 'POST',
                     headers: {
@@ -97,7 +73,7 @@ export function Chat() {
                     body: JSON.stringify(data)
                 }
                 console.log(req_json)
-                fetch('/chat', req_json)
+                fetch('https://on-v-doctor.adarshkumar35.repl.co/chat', req_json)
                 .then((res)=>{
                     return res.json();
                 })
@@ -125,7 +101,6 @@ export function Chat() {
                 <h1 className='chats-title'>
                     Here you can chat with On-V-Doctor
                 </h1>
-                {/* demo chats */}
                 <div id='messages'>
                     <div className="msg ovd-msg">
                         <span className="profile">
@@ -139,22 +114,7 @@ export function Chat() {
                             </p>
                         </div>
                     </div>
-                    {/* <div className="msg user-msg">
-                        <span className="profile">
-                            <img src="./user-profile.png" alt="user-profile" />
-                        </span>
-                        <div className="msg-data user-msg-data">
-                            <p>
-                                Recently a honeybee sting me, please help me out to get relief.
-                            </p>
-                        </div>
-                    </div> */}
                 </div>
-                {/* <div id="loader">
-                    <div className="loader-dot loader-dot1"></div>
-                    <div className="loader-dot loader-dot2"></div>
-                    <div className="loader-dot loader-dot3"></div>
-                </div> */}
                 <div className='inp-by-user'>
                     <form id='user-query-inp-form'>
                         <input name='query' id='user-query' type="text" placeholder='ask something...' />

@@ -1,6 +1,5 @@
 import './App.css';
 
-import { Home } from './components/home/Home';
 import { Chat } from './components/chat/Chat';
 
 import {
